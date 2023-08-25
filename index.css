@@ -245,7 +245,7 @@ h1 + a:hover {
 }
 
 .huaweiImg {
-  background: url('/images/huawei_logo.webp') no-repeat;
+  background: url('images/huawei_logo.webp') no-repeat;
   background-position: center;
   width: auto;
   height: 100px;
