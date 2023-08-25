@@ -329,7 +329,7 @@ h1 + a:hover {
 }
 
 .builderRight-one {
-  background: url('/images/builder1.png');
+  background: url('images/builder1.png');
   width: 50px;
   height: 100px;
   background-position: center;
@@ -338,7 +338,7 @@ h1 + a:hover {
 }
 
 .builderRight-two {
-  background: url('/images/builder2.png');
+  background: url('images/builder2.png');
   width: 50px;
   height: 100px;
   background-position: center;
@@ -347,7 +347,7 @@ h1 + a:hover {
 }
 
 .builderLeft-one {
-  background: url('/images/builder3.png');
+  background: url('images/builder3.png');
   width: 50px;
   height: 100px;
   background-position: center;
@@ -356,7 +356,7 @@ h1 + a:hover {
 }
 
 .builderLeft-two {
-  background: url('/images/builder4.png');
+  background: url('images/builder4.png');
   width: 50px;
   height: 100px;
   background-position: center;
