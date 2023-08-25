@@ -1,0 +1,707 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  /* navbar start */
+
+#menuClose {
+  display: none;
+}
+
+#head {
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 50%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+#closeMenu {
+  display: none;
+}
+
+#brand {
+  width: 50px;
+  color: white;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  z-index: 9999;
+  transition: color .5s;
+}
+
+h1 {
+  text-decoration: none;
+  font-family: inherit;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+#menu {
+  z-index: 9999;
+  font-size: 40px !important;
+  color: white;
+  font-weight: 100;
+  padding: 5px;
+  transition: color .5s;
+}
+
+#mainMenu {
+  flex-grow: 1;
+  position: fixed;
+}
+
+#mainMenu li {
+  list-style: none;
+}
+
+#mainMenu li a { 
+  display: inline-block;
+  padding-top: 1.75rem;
+  transition: color .3s;
+  text-decoration: underline solid 1px black;
+  text-underline-offset: 5px;
+}
+
+#mainMenu li a:focus,
+#mainMenu li a:hover {
+  color: black;
+}
+
+header {
+  border-radius: 5px;
+  min-height: 70px;
+}
+
+body > header a[href^="#"] {
+  display: block;
+}
+
+h1 + a {
+  display: block;
+  position: absolute;
+  top: 1.75rem;
+  right: 5rem;
+  width: 2.75rem;
+  height: 1.5rem;
+}
+
+h1 + a:focus,
+h1 + a:hover {
+  --gradColor: #800020;
+}
+
+#mainMenu, 
+#mainMenu > a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#mainMenu {
+  left: -100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(255, 255, 255, .5);
+  transition: opacity 0.3s, left 0s 0.3s;
+  z-index: 5;
+  position: fixed;
+  backdrop-filter: blur(20px);
+}
+
+#mainMenu:target {
+  left: 0;
+  opacity: 1;
+  transition: left .3s;
+}
+
+#mainMenu:target ul {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#mainMenu li a {
+  display: block;
+  text-align: center;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  min-width: 70vw;
+}
+
+/* END of NAVBAR */
+
+#section-1 {
+  width: 100%;
+  min-height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.backgroundImg {
+  filter: blur(3px);
+  background: url('images/Default_Write_the_text_Green_Earth_2_1887a87c-2e03-41e7-88bc-912b5a44bc3e_1.jpg');
+  background-position-x: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 950px;
+  background-size: cover;
+  position: relative;
+}
+
+.backgroundImg::before {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 50%; 
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
+}
+.containerSectionOne {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#heroTitle{ 
+  color: white;
+  font-size: 45px;
+  font-weight: 400;
+  padding-top: 25vh;
+  padding-left: 5vw;
+}
+
+#heroDesc {
+  color: white;
+  font-weight: 300;
+  padding-left: 5vw;
+}
+
+.buttonsSectionOne {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10vh;
+}
+
+#learnMoreSecOneBtn,
+#bookameetSecOneBtn {
+  border-style: none;
+  padding: 10px 25px;
+  background-color: transparent;
+  outline: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+#bookameetSecOneBtn {
+  background-color: #00A8E8;
+  font-weight: 600; 
+  font-size: 25px;
+  outline-style: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Huawei Partner Copy */
+#huaweiPartner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.huaweiImg {
+  background: url('/images/huawei_logo.webp') no-repeat;
+  background-position: center;
+  width: auto;
+  height: 100px;
+}
+
+#huaweiCopy {
+  text-align: center;
+  padding: 0 15px 0 15px;
+}
+
+/* what we do section */
+
+#whatwedoSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+.containerWhatWeDoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+  padding: 100px 0 100px 0;
+  align-items: center;
+}
+
+#whatwedoTitle {
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  font-weight: normal;
+  font-size: 40px;
+}
+
+#whatwedoDesc {
+  text-align: center;
+  color: rgba(0, 0, 0, .5);
+  max-width: 350px;
+  padding: 0 15px 0 15px;
+  line-height: 1.5;
+}
+
+.servicesCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 700px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.serviceTitle {
+  font-size: 25px;
+  color: black;
+}
+
+.serviceDesc {
+  font-size: 14px;
+  color: black;
+  font-weight: normal;
+  text-align: left;
+}
+
+.servicesCards .slice {
+  background-color: rgba(153, 255, 153, .3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+  border-radius: 20px;
+  margin: 0 5px 0 5px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.textPart {
+  max-width: 80%;
+  color: white;
+}
+
+.builderRight-one {
+  background: url('/images/builder1.png');
+  width: 50px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.builderRight-two {
+  background: url('/images/builder2.png');
+  width: 50px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.builderLeft-one {
+  background: url('/images/builder3.png');
+  width: 50px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.builderLeft-two {
+  background: url('/images/builder4.png');
+  width: 50px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-orientation: from-image;
+}
+
+#requestFormSection {
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#offerReqTitle {
+  color: black;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#offerReqDesc {
+  color:black;
+  text-align: left;
+  max-width: 400px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .8);
+  font-style: italic;
+  line-height: 1.5;
+  padding: 0 10px 0 10px;
+}
+
+#form{
+  display: none;
+  background-color: rgba(153, 255, 153, .3);
+  width:340px;
+  height:440px;
+  border-radius:8px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  position:relative;
+  animation: fadeIn .5s ease-in-out forwards;
+}
+
+#form:not(.hidden) {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  resize:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;
+  transition:all .3s;
+  border-bottom:2px solid #bebed2;
+}
+
+input:focus{
+  border-bottom:2px solid #78788c;
+}
+
+p:before{
+  content:attr(type);
+  display:block;
+  margin:28px 0 0;
+  font-size:14px;
+  color:black;
+}
+
+button{
+  float: right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  font-family:'Montserrat',sans-serif;
+  color:white;
+  font-weight: bold;
+  background-color: #00A8E8;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-style: none;
+  border-radius: 20px;
+  cursor:pointer;
+  transition:all .3s;
+}
+
+button:hover{
+  background:greenyellow;
+  color:black;
+}
+
+.fa-phone,
+.fa-envelope-o{
+  margin:0 5px 0 15px;
+}
+
+.contactData {
+  content:'Hi';
+  position:absolute;
+  bottom:-15px;
+  right:-20px;
+  background: rgba(0, 0, 0, 0.5);
+  color:#fff;
+  display: flex;
+  flex-direction: row;
+  padding:16px 4px 16px 0;
+  border-radius:6px;
+  font-size:12px;
+  box-shadow:10px 10px 40px -14px #000;
+}
+
+#ourOffer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#ourOffer h1 {
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+
+.offerCards {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.offerCard {
+  width: 300px;
+  height: 300px;
+  color: white;
+  text-align: center;
+  background-color: rgba(153, 255, 153, .3);
+  border-radius: 20px;
+}
+
+.cardContains {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cardContains h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+}
+
+.cardContains span {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  color: black;
+  max-width: 250px;
+}
+
+/* why us section */
+
+#whyUsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+#whyUsSection h1 {
+  padding-top: 5vh;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.motives {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.motive {
+  max-width: 250px;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-rows: .1fr 2fr; 
+  gap: 0px 0px; 
+}
+
+.motive h3 {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  padding: 10px;
+  max-width: fit-content;
+}
+
+.motive p::before {
+  margin: 0;
+}
+
+.down {
+  vertical-align: baseline;
+  font-size: 14px !important;
+  color: rgba(153, 255, 153, 1);
+}
+
+/* faq section */
+#faqSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  gap: 30px;
+}
+
+#faqSection h1 {
+  padding-top: 5vh;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.question h3 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: .9fr .1fr; 
+  gap: 0px 0px; 
+}
+
+.expand-button {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+  background-color: rgba(153, 255, 153, .3);
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.show-answer .expand-button {
+  transform: rotate(180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.show-answer .answer {
+  max-height: 1000px;
+}
+
+#footer {
+  min-height: 200px;
+  background-color: rgba(0, 0, 0, .1);
+  bottom: 0;
+  display: flex;
+  margin-top: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px;
+}
+
+#terms, #cookies, #credits {
+  font-weight: normal;
+}
+
+#credits {
+  font-size: 15px;
+  text-align: center;
+  opacity: .5;
+  color: black;
+}
+
+.logo {
+  color: black;
+  font-size: 40px;
+  font-weight: normal;
+  display: flex;
+  align-self: center;
+}
+
+.site-map {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
